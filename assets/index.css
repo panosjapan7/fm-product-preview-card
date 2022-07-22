@@ -1,0 +1,18 @@
+.container {
+    display: flex;
+    background-color: hsl(30, 38%, 92%);
+    
+}
+    .imageContainer {
+        width: 270px;
+        height: auto;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+    .imageContainer img {
+        width: 100%;
+        height: 100%;
+    }
+    .productDeailsContainer {
+
+    }
