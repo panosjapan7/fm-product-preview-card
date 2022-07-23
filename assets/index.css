@@ -8,7 +8,7 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100%;
+    min-height: 90%;
 }
 .container {
         display: inline-flex;
@@ -20,9 +20,12 @@ html, body {
             border-bottom-left-radius: 10px;
             overflow: hidden;
         }
-        .imageContainer img {
+        .imageDesktop {
             width: 100%;
             height: 100%;
+        }
+        .imageMobile {
+            display: none;
         }
         .productDeailsContainer {
             width: 300px;
@@ -35,7 +38,7 @@ html, body {
                 font-size: 0.8em;
                 font-family: 'Montserrat', sans-serif;
                 text-transform: uppercase;
-                color: rgb(143, 145, 150);
+                color: hsl(228, 12%, 48%);
                 letter-spacing: 0.3em;
 
                 margin-top: 30px;
@@ -47,15 +50,16 @@ html, body {
                 letter-spacing: 0.03em;
                 line-height: 1em;
                 width: 200px;
+                color: hsl(212, 21%, 14%);
 
                 margin-top: 20px;
                 margin-bottom: 25px;
                 margin-left: 30px;
             }
             .productDescription {
-                font-size: 0.9em;
+                font-size: 14px;
                 font-family: 'Montserrat', sans-serif;
-                color: rgb(143, 145, 150);
+                color: hsl(228, 12%, 48%);
                 line-height: 1.6em;
 
                 width: 230px;
@@ -80,12 +84,11 @@ html, body {
                 .productPriceFull {
                     font-size: 0.8em;
                     font-family: 'Montserrat', sans-serif;
-                    color: rgb(143, 145, 150);
+                    color: hsl(228, 12%, 48%);
                     text-decoration: line-through;
                 }
             .buttonContainer {
                 display: flex;
-                /* align-items: flex-start; */
                 width: 260px;
                 height: 70px;
                 
@@ -101,6 +104,7 @@ html, body {
                     background-color: hsl(158, 36%, 37%);
                     font-size: 0.8em;
                     font-family: 'Montserrat', sans-serif;
+                    font-weight: 700;
                     color: white;
                     text-align: center;
 
@@ -110,114 +114,69 @@ html, body {
                     margin-left: 30px;
                 }
                 .buyButton:hover {
-                    background-color: hsl(158, 27%, 25%);
+                    background-color: hsl(157, 55%, 25%);
                     cursor: pointer;
                 }
     
+    /* End of Desktop CSS */
+
     /* Mobile */
     @media screen and (max-width: 375px) {
         .container {
-            display: inline-flex;
             flex-wrap: wrap;
         }
             .imageContainer {
-                width: 285px;
-                height: auto;
-                border-top-left-radius: 10px;
-                border-bottom-left-radius: 10px;
-                overflow: hidden;
-            }
-            .imageContainer img {
-                width: 100%;
-                height: 100%;
-            }
-            .productDeailsContainer {
-                width: 300px;
+                width: auto;
+                height: 250px;
                 border-top-right-radius: 10px;
-                border-bottom-right-radius: 10px;
+                border-top-left-radius: 10px;
+                border-bottom-left-radius: 0px;
                 overflow: hidden;
-                background-color: white;
+                flex-grow: 1;
+            }
+                .imageDesktop {
+                    display: none;
+                }
+                .imageMobile {
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                }
+            .productDeailsContainer {
+                width: auto;
+                padding-left: 10px;
+                padding-right: 10px;
+                flex-grow: 1;
+
+                border-top-right-radius: 0px;
+                border-bottom-left-radius: 10px;
+                border-bottom-right-radius: 10px;
             }
                 .productType {
-                    font-size: 0.8em;
-                    font-family: 'Montserrat', sans-serif;
-                    text-transform: uppercase;
-                    color: rgb(143, 145, 150);
-                    letter-spacing: 0.3em;
-    
-                    margin-top: 30px;
-                    margin-left: 30px;
+                    margin-left: 10px;
                 }
                 .productTitle {
-                    font-size: 2em;
-                    font-family: 'Fraunces', serif;
-                    letter-spacing: 0.03em;
-                    line-height: 1em;
-                    width: 200px;
-    
-                    margin-top: 20px;
-                    margin-bottom: 25px;
-                    margin-left: 30px;
+                    width: 300px;
+
+                    margin-top: 10px;
+                    margin-bottom:15px;
+                    margin-left: 10px;
                 }
                 .productDescription {
-                    font-size: 0.9em;
-                    font-family: 'Montserrat', sans-serif;
-                    color: rgb(143, 145, 150);
-                    line-height: 1.6em;
-    
-                    width: 230px;
-    
-                    margin-top: 0px;
-                    margin-bottom: 10px;
-                    margin-left: 30px;
+                    width: 300px;
+                    margin-left: 10px;
                 }
                 .pricesContainer {
-                    display: flex;
-                    align-items: center;
-                    gap: 30px;
-                    height: 50px;
-                    margin-left: 30px;
+                    margin-left: 10px;
                 }
-                    .productPriceOffer {
-                        font-size: 2em;
-                        font-family: 'Fraunces', serif;
-                        color: hsl(158, 36%, 37%);
-                        letter-spacing: 0.03em;
-                    }
-                    .productPriceFull {
-                        font-size: 0.8em;
-                        font-family: 'Montserrat', sans-serif;
-                        color: rgb(143, 145, 150);
-                        text-decoration: line-through;
-                    }
                 .buttonContainer {
-                    display: flex;
-                    /* align-items: flex-start; */
-                    width: 260px;
+                    width: 310px;
                     height: 70px;
-                    
+                    margin-bottom: 20px;
                 }
                     .buyButton {
-                        all: unset;
-    
-                        flex-grow: 1;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        gap: 7px;
-                        background-color: hsl(158, 36%, 37%);
-                        font-size: 0.8em;
-                        font-family: 'Montserrat', sans-serif;
-                        color: white;
-                        text-align: center;
-    
-                        border-radius: 10px;
-                        height: 40px;
-                        margin-top: 20px;
-                        margin-left: 30px;
-                    }
-                    .buyButton:hover {
-                        background-color: hsl(158, 27%, 25%);
-                        cursor: pointer;
+                        height: 50px;
+                        margin-left: 10px;
                     }
     }
+    /* End of Mobile CSS */
