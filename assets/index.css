@@ -3,12 +3,16 @@ html, body {
     
     /* div stretch 100% page height regardless of content */
     height: 100%; 
+    /* padding-top: 300px; */
+    
 }
 .parentContainer {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 90%;
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 .container {
         display: inline-flex;
